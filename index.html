@@ -1,175 +1,260 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🇰🇷 釜山五日行程 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#f5f2ee;
+  --bg:#f0f4f8;
   --surface:#ffffff;
-  --navy:#0d1f3c;
-  --accent:#e05c35;
-  --text:#1c1a17;
-  --muted:#6b6560;
-  --hint:#9e9993;
-  --border:rgba(0,0,0,0.08);
-  --border2:rgba(0,0,0,0.15);
-  --shadow:0 2px 16px rgba(0,0,0,0.06),0 1px 4px rgba(0,0,0,0.04);
-  --shadow-h:0 6px 24px rgba(0,0,0,0.11),0 2px 8px rgba(0,0,0,0.06);
-  --r:14px;--r-sm:8px;
-  --c-sight:#2563eb;--c-food:#e05c35;--c-hotel:#16a34a;--c-trans:#78716c;--c-free:#7c3aed;
+  --surface2:#f7fafc;
+  --navy:#1a3a5c;
+  --teal:#0891b2;
+  --teal-light:#e0f7fa;
+  --teal-mid:#b2ebf2;
+  --accent:#f97316;
+  --accent-light:#fff7ed;
+  --green:#059669;
+  --green-light:#ecfdf5;
+  --purple:#7c3aed;
+  --purple-light:#f5f3ff;
+  --text:#1e293b;
+  --text2:#475569;
+  --text3:#94a3b8;
+  --border:#e2e8f0;
+  --border2:#cbd5e1;
+  --r:14px;--r-sm:8px;--r-xs:6px;
+  --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.08),0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg:0 8px 24px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.05);
 }
 @media(prefers-color-scheme:dark){
   :root{
-    --bg:#141210;--surface:#1c1a17;--text:#f0ede8;--muted:#9e9890;--hint:#6a6460;
-    --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
-    --shadow:0 2px 16px rgba(0,0,0,0.4);--shadow-h:0 6px 24px rgba(0,0,0,0.5);
+    --bg:#0f172a;--surface:#1e293b;--surface2:#263548;
+    --teal-light:#0c3440;--teal-mid:#0e4a5c;
+    --accent-light:#2d1a06;--green-light:#052e16;--purple-light:#1e0a4a;
+    --text:#f1f5f9;--text2:#94a3b8;--text3:#475569;
+    --border:#2d3f56;--border2:#3b5068;
   }
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans','Noto Sans TC',-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh}
-.page{max-width:680px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 60px rgba(0,0,0,0.08)}
+body{font-family:'Noto Sans TC','PingFang TC',-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.page{max-width:680px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,0.06)}
 
 /* ── HERO ── */
-.hero{position:relative;height:360px;overflow:hidden;background:var(–navy)}
-.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.5);transition:transform 8s ease}
-.hero:hover img{transform:scale(1.04)}
-.hero-grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,31,60,0.1) 0%,rgba(13,31,60,0.75) 100%)}
-.hero-body{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.5rem 1.75rem;color:#fff}
-.hero-tag{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;background:var(–accent);color:#fff;padding:4px 10px;border-radius:4px;margin-bottom:12px;font-weight:600}
-.hero-title{font-family:‘Playfair Display’,Georgia,serif;font-size:34px;font-weight:700;line-height:1.15;margin-bottom:8px}
-.hero-sub{font-size:14px;opacity:0.78;margin-bottom:16px;font-weight:400}
-.hero-pills{display:flex;gap:8px;flex-wrap:wrap}
-.hero-pill{font-size:12px;background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.28);color:#fff;padding:5px 12px;border-radius:20px;backdrop-filter:blur(6px)}
+.hero{background:linear-gradient(135deg,#1a3a5c 0%,#0e6688 60%,#0891b2 100%);padding:2rem 1.5rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30px;right:-30px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.hero::after{content:'';position:absolute;bottom:-40px;left:40px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.03)}
+.hero-flag{font-size:40px;margin-bottom:10px;display:block}
+.hero-title{font-size:26px;font-weight:700;color:#fff;line-height:1.2;letter-spacing:-0.3px}
+.hero-sub{font-size:14px;color:rgba(255,255,255,0.72);margin-top:5px;font-weight:400}
+.hero-pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.hero-pill{font-size:12px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);padding:4px 11px;border-radius:20px;font-weight:500}
+
+/* ── WEATHER BAR ── */
+.weather-bar{background:var(--teal-light);border-bottom:1px solid var(--teal-mid);padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.weather-title{font-size:11px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.8px;white-space:nowrap}
+.weather-chips{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.wchip{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:var(--navy);background:rgba(255,255,255,0.65);border:1px solid var(--teal-mid);padding:4px 10px;border-radius:20px;white-space:nowrap}
+@media(prefers-color-scheme:dark){.wchip{color:var(--teal);background:rgba(8,145,178,0.08)}.weather-title{color:#38bcd8}}
 
 /* ── STATS ── */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(–surface);border-bottom:1px solid var(–border)}
-.stat{padding:14px 8px;text-align:center;border-right:1px solid var(–border)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
+.stat{padding:14px 10px;text-align:center;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-l{font-size:10px;color:var(–hint);letter-spacing:0.5px;text-transform:uppercase}
-.stat-v{font-size:19px;font-weight:700;margin-top:3px;color:var(–navy)}
-@media(prefers-color-scheme:dark){.stat-v{color:var(–text)}}
+.stat-l{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;font-weight:500}
+.stat-v{font-size:18px;font-weight:700;margin-top:3px;color:var(--navy)}
+@media(prefers-color-scheme:dark){.stat-v{color:#7dd3fc}}
 
 /* ── TABS ── */
-.tabs-bar{position:sticky;top:0;z-index:30;background:var(–surface);border-bottom:1px solid var(–border);box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs-bar{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:2px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
 .tabs-bar::-webkit-scrollbar{display:none}
-.tab{flex-shrink:0;padding:0 14px;height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:pointer;border-bottom:2.5px solid transparent;user-select:none;transition:color .18s,border-color .18s;color:var(–muted)}
-.tab-day{font-size:13px;font-weight:600}
-.tab-lbl{font-size:10px;letter-spacing:0.3px;opacity:0.7}
-.tab.on{color:var(–accent);border-bottom-color:var(–accent)}
-.tab:hover:not(.on){color:var(–text)}
+.tab{flex-shrink:0;padding:0 16px;height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-2px;user-select:none;transition:color .15s,border-color .15s;color:var(--text3)}
+.tab-day{font-size:13px;font-weight:700}
+.tab-lbl{font-size:10px;letter-spacing:0.3px;margin-top:1px}
+.tab.on{color:var(--teal);border-bottom-color:var(--teal)}
+.tab:hover:not(.on){color:var(--text)}
 
-/* ── PANELS ── */
+/* ── PANEL ── */
 .panel{display:none}.panel.on{display:block}
 
-/* ── DAY BANNER ── */
-.day-banner{position:relative;height:200px;overflow:hidden;background:var(–navy)}
-.day-banner img{width:100%;height:100%;object-fit:cover;filter:brightness(0.55)}
-.day-banner-grad{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,31,60,0.65) 0%,rgba(13,31,60,0.1) 100%)}
-.day-banner-body{position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1.5rem;color:#fff}
-.day-num{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:0.7;margin-bottom:4px;font-weight:600}
-.day-title{font-family:‘Playfair Display’,serif;font-size:26px;font-weight:700;line-height:1.2}
-.day-date{font-size:13px;opacity:0.72;margin-top:4px}
+/* ── DAY HEADER ── */
+.day-header{padding:1.25rem 1.25rem 0.75rem;border-bottom:1px solid var(--border)}
+.day-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--teal);background:var(--teal-light);padding:4px 10px;border-radius:20px;margin-bottom:8px}
+.day-heading{font-size:20px;font-weight:700;color:var(--navy)}
+@media(prefers-color-scheme:dark){.day-heading{color:#7dd3fc}}
+.day-meta{font-size:13px;color:var(--text2);margin-top:3px}
+.day-note{margin:10px 0 0;font-size:13px;color:var(--text2);background:var(--surface2);border-left:3px solid var(--teal);border-radius:0 var(--r-xs) var(--r-xs) 0;padding:9px 12px;line-height:1.6}
 
 /* ── CONTENT ── */
-.content{padding:1.25rem 1.25rem 0}
-.day-note{background:var(–bg);border-left:3px solid var(–accent);border-radius:0 var(–r-sm) var(–r-sm) 0;padding:11px 14px;font-size:13px;color:var(–muted);line-height:1.65;margin-bottom:1.25rem}
+.content{padding:1rem 1rem 0}
 
-/* ── STOP ── */
-.stop{display:flex;gap:10px;margin-bottom:10px}
-.tl{display:flex;flex-direction:column;align-items:center;width:22px;flex-shrink:0;padding-top:20px}
-.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px var(–surface)}
-.dot.s{background:var(–c-sight)}.dot.f{background:var(–c-food)}.dot.h{background:var(–c-hotel)}.dot.t{background:var(–c-trans)}.dot.x{background:var(–c-free)}
-.ln{flex:1;width:1.5px;background:var(–border);margin:5px 0;min-height:14px}
+/* ── STOP / TIMELINE ── */
+.stop{display:flex;gap:10px;margin-bottom:8px}
+.tl{display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;padding-top:18px}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;border:2px solid var(--surface)}
+.dot.s{background:#0891b2;box-shadow:0 0 0 2px rgba(8,145,178,0.2)}
+.dot.f{background:#f97316;box-shadow:0 0 0 2px rgba(249,115,22,0.2)}
+.dot.h{background:#059669;box-shadow:0 0 0 2px rgba(5,150,105,0.2)}
+.dot.t{background:#94a3b8;box-shadow:0 0 0 2px rgba(148,163,184,0.2)}
+.dot.x{background:#7c3aed;box-shadow:0 0 0 2px rgba(124,58,237,0.2)}
+.ln{flex:1;width:1.5px;background:var(--border);margin:4px 0;min-height:12px}
 
 /* ── CARD ── */
-.card{flex:1;background:var(–surface);border:1px solid var(–border);border-radius:var(–r);overflow:hidden;cursor:pointer;box-shadow:var(–shadow);transition:box-shadow .2s,transform .18s}
-.card:hover{box-shadow:var(–shadow-h);transform:translateY(-2px)}
-.card.open{border-color:rgba(224,92,53,0.35);box-shadow:0 0 0 3px rgba(224,92,53,0.08),var(–shadow-h)}
-.card-head{padding:12px 14px}
+.card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;box-shadow:var(--shadow);transition:box-shadow .18s,border-color .18s,transform .15s}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.card.open{border-color:var(--teal);box-shadow:0 0 0 3px rgba(8,145,178,0.08),var(--shadow-md)}
+.card-head{padding:11px 13px}
 .ch{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.time{font-size:11px;color:var(–hint);font-variant-numeric:tabular-nums;font-weight:600;letter-spacing:0.2px}
-.name{font-size:14px;font-weight:600;margin-top:2px;line-height:1.4}
-.caret-wrap{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1.5px solid var(–border2);flex-shrink:0;margin-top:10px;transition:transform .25s,background .15s,border-color .15s}
-.card.open .caret-wrap{transform:rotate(180deg);background:rgba(224,92,53,0.08);border-color:rgba(224,92,53,0.4)}
-.caret-wrap svg{width:9px;height:9px;stroke:var(–hint);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.tag{font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500}
-.ts{background:#dbeafe;color:#1e3a8a}.tf{background:#ffedd5;color:#9a3412}.th{background:#dcfce7;color:#14532d}
-.tt{background:#f3f4f6;color:#4b5563}.tx{background:#ede9fe;color:#4c1d95}
-.tw{background:#fef3c7;color:#78350f;font-weight:700}.ta{background:#d1fae5;color:#065f46}
+.time-name{flex:1;min-width:0}
+.time{font-size:11px;color:var(--text3);font-variant-numeric:tabular-nums;font-weight:600}
+.name{font-size:14px;font-weight:600;margin-top:2px;line-height:1.4;color:var(--text)}
+.toggle-btn{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:8px;transition:transform .22s,background .15s,border-color .15s}
+.card.open .toggle-btn{transform:rotate(180deg);background:var(--teal-light);border-color:var(--teal)}
+.toggle-btn svg{width:9px;height:9px;stroke:var(--text3);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.card.open .toggle-btn svg{stroke:var(--teal)}
+
+/* ── TAGS ── */
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.tag{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:500}
+.ts{background:#e0f7fa;color:#006064}
+.tf{background:#fff7ed;color:#c2410c}
+.th{background:#ecfdf5;color:#065f46}
+.tt{background:#f1f5f9;color:#475569}
+.tx{background:#f5f3ff;color:#5b21b6}
+.tw{background:#fefce8;color:#854d0e;font-weight:700}
+.ta{background:#f0fdf4;color:#166534}
 @media(prefers-color-scheme:dark){
-.ts{background:#1e3a6e;color:#93c5fd}.tf{background:#431407;color:#fdba74}.th{background:#052e16;color:#86efac}
-.tt{background:#27272a;color:#a1a1aa}.tx{background:#2e1065;color:#c4b5fd}
-.tw{background:#3a1f00;color:#fcd34d}.ta{background:#052e20;color:#6ee7b7}
+  .ts{background:#0c3440;color:#67e8f9}.tf{background:#2d1a06;color:#fb923c}
+  .th{background:#052e16;color:#4ade80}.tt{background:#263548;color:#94a3b8}
+  .tx{background:#1e0a4a;color:#a78bfa}.tw{background:#2d2006;color:#fbbf24}
+  .ta{background:#052e16;color:#86efac}
 }
 
 /* ── EXPANDABLE BODY ── */
-.card-body{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(0.4,0,0.2,1)}
-.card.open .card-body{max-height:900px}
-.card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(–bg)}
-.card-detail{padding:14px 14px 16px;border-top:1px solid var(–border);font-size:13px;color:var(–muted);line-height:1.75}
-.tip-box{margin-top:10px;border-radius:var(–r-sm);padding:9px 12px;font-size:12px;line-height:1.65;background:#eff6ff;color:#1e40af;border-left:3px solid #3b82f6}
-.warn-box{margin-top:10px;border-radius:var(–r-sm);padding:9px 12px;font-size:12px;line-height:1.65;background:#fffbeb;color:#92400e;border-left:3px solid #f59e0b;font-weight:600}
-@media(prefers-color-scheme:dark){.tip-box{background:#1e2e50;color:#93c5fd}.warn-box{background:#2d1a00;color:#fcd34d}}
-.grp-rows{display:flex;flex-direction:column;gap:5px;margin-top:10px}
-.ga-row{background:#dbeafe;color:#1e3a8a;padding:6px 10px;border-radius:6px;font-size:12px;line-height:1.5}
-.gb-row{background:#ede9fe;color:#4c1d95;padding:6px 10px;border-radius:6px;font-size:12px;line-height:1.5}
+.card-body{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(0.4,0,0.2,1)}
+.card.open .card-body{max-height:1200px}
+.card-detail{padding:12px 13px 14px;border-top:1px solid var(--border);font-size:13px;color:var(--text2);line-height:1.75}
+.card-detail p+p{margin-top:6px}
+
+/* ── INFO BLOCKS ── */
+.info-block{margin-top:10px;border-radius:var(--r-xs);padding:10px 12px;font-size:12.5px;line-height:1.65}
+.tip-block{background:#eff6ff;color:#1e40af;border-left:3px solid #3b82f6}
+.warn-block{background:#fffbeb;color:#92400e;border-left:3px solid #f59e0b;font-weight:600}
+.note-block{background:var(--surface2);color:var(--text2);border-left:3px solid var(--border2)}
+@media(prefers-color-scheme:dark){
+  .tip-block{background:#1e2e50;color:#93c5fd}
+  .warn-block{background:#2d1a00;color:#fcd34d}
+  .note-block{background:var(--surface2);color:var(--text2)}
+}
+
+/* ── DETAIL LIST ── */
+.detail-list{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.dl-item{display:flex;gap:7px;font-size:12.5px;color:var(--text2);line-height:1.6}
+.dl-icon{flex-shrink:0;margin-top:1px;opacity:0.6;font-size:13px}
+
+/* ── GROUP ROWS ── */
+.grp-rows{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+.ga-row{background:#eff6ff;color:#1e3a8a;padding:6px 10px;border-radius:6px;font-size:12.5px;line-height:1.5;font-weight:500}
+.gb-row{background:#f5f3ff;color:#4c1d95;padding:6px 10px;border-radius:6px;font-size:12.5px;line-height:1.5;font-weight:500}
 @media(prefers-color-scheme:dark){.ga-row{background:#1e3a6e;color:#93c5fd}.gb-row{background:#2e1065;color:#c4b5fd}}
-.card-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.map-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;background:var(–accent);color:#fff;border-radius:var(–r-sm);font-size:12px;font-weight:600;text-decoration:none;transition:opacity .15s,transform .12s}
+
+/* ── MAP BUTTON ── */
+.card-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.map-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;background:var(--teal);color:#fff;border-radius:var(--r-xs);font-size:12px;font-weight:600;text-decoration:none;transition:opacity .15s,transform .12s;box-shadow:0 2px 6px rgba(8,145,178,0.25)}
 .map-btn:hover{opacity:0.88;transform:translateY(-1px)}
 .map-btn:active{transform:scale(0.97)}
-.map-btn svg{width:13px;height:13px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.map-btn svg{width:12px;height:12px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.map-btn.alt{background:var(--purple)}
 
 /* ── LEGEND + FOOTER ── */
-.legend{padding:1.5rem;margin-top:1rem;border-top:1px solid var(–border)}
-.legend-title{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(–hint);margin-bottom:10px}
-.legend-items{display:flex;flex-wrap:wrap;gap:12px}
-.li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(–muted)}
+.legend{padding:1.25rem;border-top:1px solid var(--border);margin-top:1rem}
+.legend-title{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:10px;font-weight:600}
+.legend-items{display:flex;flex-wrap:wrap;gap:10px}
+.li{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2)}
 .ld{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.footer{text-align:center;padding:2rem 1rem 2.5rem;font-size:12px;color:var(–hint);line-height:2;border-top:1px solid var(–border)}
-.footer a{color:var(–hint);text-decoration:underline;text-underline-offset:3px}
-.photo-note{font-size:11px;color:var(–hint);margin-top:5px;opacity:0.7}
+.footer{text-align:center;padding:1.75rem 1rem 2.5rem;font-size:12px;color:var(--text3);line-height:2;border-top:1px solid var(--border)}
 </style>
-
 </head>
 <body>
 <div class="page">
 
 <!-- ══ HERO ══ -->
-
 <div class="hero">
-  <img src="https://images.unsplash.com/photo-oY_h_gyVZlU?w=800&q=80" alt="釜山夜景" loading="eager">
-  <div class="hero-grad"></div>
-  <div class="hero-body">
-    <span class="hero-tag">TRIP 2026</span>
-    <div class="hero-title">釜山深度五日</div>
-    <div class="hero-sub">4月16日（三）— 4月20日（一）　A、B 兩組同行</div>
-    <div class="hero-pills">
-      <span class="hero-pill">✈ KE2086 / KE2085</span>
-      <span class="hero-pill">🏨 海雲台 + 南浦洞</span>
-      <span class="hero-pill">👥 A組 ＆ B組</span>
-    </div>
+  <svg class="hero-flag" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" style="width:56px;height:37px;border-radius:4px;display:block;margin-bottom:10px">
+    <rect width="900" height="600" fill="#fff"/>
+    <circle cx="450" cy="300" r="150" fill="#C60C30"/>
+    <path d="M450 150 A150 150 0 0 1 450 450 A75 75 0 0 1 450 300 A75 75 0 0 0 450 150Z" fill="#003478"/>
+    <!-- Trigrams -->
+    <g stroke="#000" stroke-width="18" stroke-linecap="round">
+      <!-- Top-left: ☰ Geon -->
+      <g transform="translate(195,130) rotate(-45,0,0)">
+        <line x1="-60" y1="-30" x2="60" y2="-30"/><line x1="-60" y1="0" x2="60" y2="0"/><line x1="-60" y1="30" x2="60" y2="30"/>
+      </g>
+      <!-- Bottom-right: ☷ Gon -->
+      <g transform="translate(705,470) rotate(-45,0,0)">
+        <line x1="-60" y1="-30" x2="-8" y2="-30"/><line x1="8" y1="-30" x2="60" y2="-30"/>
+        <line x1="-60" y1="0" x2="-8" y2="0"/><line x1="8" y1="0" x2="60" y2="0"/>
+        <line x1="-60" y1="30" x2="-8" y2="30"/><line x1="8" y1="30" x2="60" y2="30"/>
+      </g>
+      <!-- Top-right: ☵ Gam -->
+      <g transform="translate(705,130) rotate(45,0,0)">
+        <line x1="-60" y1="-30" x2="-8" y2="-30"/><line x1="8" y1="-30" x2="60" y2="-30"/>
+        <line x1="-60" y1="0" x2="60" y2="0"/>
+        <line x1="-60" y1="30" x2="-8" y2="30"/><line x1="8" y1="30" x2="60" y2="30"/>
+      </g>
+      <!-- Bottom-left: ☲ Li -->
+      <g transform="translate(195,470) rotate(45,0,0)">
+        <line x1="-60" y1="-30" x2="60" y2="-30"/>
+        <line x1="-60" y1="0" x2="-8" y2="0"/><line x1="8" y1="0" x2="60" y2="0"/>
+        <line x1="-60" y1="30" x2="60" y2="30"/>
+      </g>
+    </g>
+  </svg>
+  <div class="hero-title">釜山深度五日旅遊</div>
+  <div class="hero-sub">2026年 4月16日（三）— 4月20日（一）</div>
+  <div class="hero-pills">
+    <span class="hero-pill">✈ KE2086 / KE2085</span>
+    <span class="hero-pill">🏨 海雲台 + 南浦洞</span>
   </div>
 </div>
 
-<!-- ══ STATS ══ -->
-
-<div class="stats">
-  <div class="stat"><div class="stat-l">出發日</div><div class="stat-v">4/16</div></div>
-  <div class="stat"><div class="stat-l">天數</div><div class="stat-v">5天</div></div>
-  <div class="stat"><div class="stat-l">必吃名店</div><div class="stat-v">6家</div></div>
-  <div class="stat"><div class="stat-l">必預約</div><div class="stat-v">3項</div></div>
+<!-- ══ WEATHER BAR ══ -->
+<div class="weather-bar">
+  <span class="weather-title">釜山天氣</span>
+  <div class="weather-chips" id="wx-chips"><span class="wchip" style="opacity:.5">載入中…</span></div>
 </div>
+<script>
+(async()=>{
+  const WMO={0:'☀️ 晴',1:'🌤 大致晴',2:'⛅ 多雲',3:'☁️ 陰',45:'🌫 霧',48:'🌫 霧',51:'🌦 毛毛雨',53:'🌦 毛毛雨',55:'🌦 毛毛雨',61:'🌧 小雨',63:'🌧 中雨',65:'🌧 大雨',71:'🌨 小雪',73:'🌨 中雪',75:'🌨 大雪',80:'🌦 陣雨',81:'🌦 陣雨',82:'⛈ 大陣雨',95:'⛈ 雷雨',96:'⛈ 雷雨',99:'⛈ 雷雨'};
+  const DAYS=['日','一','二','三','四','五','六'];
+  const START='2026-04-16',END='2026-04-20';
+  try{
+    const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=35.18&longitude=129.08&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia/Seoul&start_date=${START}&end_date=${END}`);
+    const d=await r.json();
+    const chips=d.daily.time.map((t,i)=>{
+      const dt=new Date(t);
+      const day=`${dt.getMonth()+1}/${dt.getDate()}(${DAYS[dt.getDay()]})`;
+      const wc=d.daily.weathercode[i];
+      const icon=(WMO[wc]||'🌡').split(' ')[0];
+      const desc=(WMO[wc]||'').split(' ').slice(1).join(' ')||'';
+      const hi=Math.round(d.daily.temperature_2m_max[i]);
+      const lo=Math.round(d.daily.temperature_2m_min[i]);
+      return `<span class="wchip"><b style="font-weight:600">${day}</b> ${icon} ${hi}°/${lo}° ${desc}</span>`;
+    }).join('');
+    document.getElementById('wx-chips').innerHTML=chips;
+  }catch(e){
+    document.getElementById('wx-chips').innerHTML='<span class="wchip">⚠️ 天氣資訊暫無法取得</span>';
+  }
+})();
+</script>
+
 
 <!-- ══ TABS ══ -->
-
 <div class="tabs-bar">
   <div class="tab on" onclick="sw(0)"><span class="tab-day">D1</span><span class="tab-lbl">4/16 出發</span></div>
   <div class="tab" onclick="sw(1)"><span class="tab-day">D2</span><span class="tab-lbl">4/17 海岸</span></div>
@@ -178,391 +263,418 @@ body{font-family:'DM Sans','Noto Sans TC',-apple-system,sans-serif;background:va
   <div class="tab" onclick="sw(4)"><span class="tab-day">D5</span><span class="tab-lbl">4/20 回程</span></div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     D1
-══════════════════════════════════════════ -->
-
+<!-- ════════════════════ D1 ════════════════════ -->
 <div class="panel on" id="p0">
-  <div class="day-banner">
-    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="出發日">
-    <div class="day-banner-grad"></div>
-    <div class="day-banner-body">
-      <div class="day-num">Day 1 · April 16</div>
-      <div class="day-title">出發啟程</div>
-      <div class="day-date">台中 → 桃園 → 金海機場 → 海雲台</div>
-    </div>
+  <div class="day-header">
+    <div class="day-badge">Day 1 · April 16</div>
+    <div class="day-heading">出發啟程</div>
+    <div class="day-meta">台中 → 桃園機場 → 金海機場 → 海雲台</div>
+    <div class="day-note">✈ 重點：今日主要交通移動。包車集合出發 → KE2086 飛釜山 → 海雲台 Check-in → 密陽豬肉湯飯初體驗。行李建議前晚打包完畢。</div>
   </div>
   <div class="content">
-    <div class="day-note">✈ 今日重點：台中包車集合出發、KE2086飛往釜山、海雲台 Check-in、密陽豬肉湯飯初體驗</div>
 
-```
-<div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">08:00</div><div class="name">台中包車出發</div><div class="tags"><span class="tag tt">包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80" alt="包車出發" loading="lazy">
-      <div class="card-detail">集合出發前往桃園機場，建議提前確認行李重量符合航空規定。<div class="grp-rows"><div class="ga-row">🅐 A組：西屯 / 大雅接送</div><div class="gb-row">🅑 B組：沙鹿接送</div></div></div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">08:00</div><div class="name">台中包車出發</div><div class="tags"><span class="tag tt">包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>集合後包車前往桃園國際機場，車程約 1.5–2 小時。請提早確認行李重量符合大韓航空規定（經濟艙通常 23kg×1件）。</p>
+          <div class="grp-rows"><div class="ga-row">🅐 A組：西屯 / 大雅接送</div><div class="gb-row">🅑 B組：沙鹿接送</div></div>
+          <div class="info-block tip-block">💡 建議出發前確認：護照、登機證（可提前線上辦理）、韓元或備用美金、行動電源已充飽</div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">12:00 — 15:30</div><div class="name">KE2086 飛往釜山金海機場</div><div class="tags"><span class="tag tt">航班</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="飛機窗景" loading="lazy">
-      <div class="card-detail">搭乘大韓航空 KE2086 從桃園飛往釜山，抵達後辦理入境手續。<div class="tip-box">💡 建議在機場兌換部分韓元現金（約 ₩100,000 左右），烤肉店和市場攤位常需現金付款</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=김해국제공항" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>金海國際機場</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">12:00 — 15:30</div><div class="name">KE2086 飛往釜山金海機場</div><div class="tags"><span class="tag tt">航班</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>搭乘大韓航空 KE2086，飛行時間約 2.5 小時，抵達釜山金海國際機場後辦理入境手續。入境韓國需填寫 K-ETA（韓國電子旅遊許可），若尚未申請務必提前辦理。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🛂</span><span>入境表格若已在 Visit Korea 網站預填，入境更快速</span></div>
+            <div class="dl-item"><span class="dl-icon">💴</span><span>機場內有換錢所，建議換約 ₩100,000–150,000 現金（烤肉、市場常需現金）</span></div>
+            <div class="dl-item"><span class="dl-icon">📶</span><span>可於機場取 SIM 卡或 WiFi 分享器，提前線上訂購較便宜</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=김해국제공항" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>金海國際機場</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">16:30 — 17:30</div><div class="name">Marysol by Haeundae Beach　Check-in</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-ELKCcwN7FXg?w=800&q=80" alt="海雲台飯店" loading="lazy">
-      <div class="card-detail">機場包車直送飯店，位於海雲台海灘旁步行即達。Check-in 後稍作休息，準備出發吃晚餐。<div class="tip-box">💡 包車已安排，無需另外叫車。高樓層房間可俯瞰海雲台夜景，入住時可詢問是否有空。</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Marysol+by+Haeundae+Beach+Busan" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">16:30 — 17:30</div><div class="name">Marysol by Haeundae Beach　Check-in</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>機場包車直送飯店，位於海雲台海灘步行距離以內。完成入住後梳洗休息，準備出發吃第一餐道地釜山料理。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🏨</span><span>Check-in 辦理時如有高樓層空房，可主動詢問，視野更佳</span></div>
+            <div class="dl-item"><span class="dl-icon">🧳</span><span>行李箱可請飯店暫存，輕裝出門晚餐</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Marysol+by+Haeundae+Beach+Busan" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>飯店位置</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">19:00</div><div class="name">晚餐：密陽豬肉湯飯</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="豬肉湯飯" loading="lazy">
-      <div class="card-detail">釜山最具代表性的庶民美食。白色豬骨湯底濃郁不腥，可依個人口味加入蝦醬和韭菜，調整鹹度與香氣。<div class="tip-box">💡 吃法：先喝一口原湯感受本味，再按喜好加料。配上白飯一起泡入湯中是道地吃法。</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=밀양돼지국밥+해운대" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">19:00</div><div class="name">晚餐：密陽豬肉湯飯 밀양돼지국밥</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>釜山最具代表性的庶民美食。以豬骨長時間熬煮的乳白色湯底，濃郁不腥、口感醇厚。桌上備有蝦醬（새우젓）和韭菜，可依個人口味分次加入調整風味。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🍜</span><span>正確吃法：先喝一口原湯，再放入白飯拌著吃，最後按喜好加蝦醬提鮮</span></div>
+            <div class="dl-item"><span class="dl-icon">🥢</span><span>附餐通常有血腸（순대），喜歡的可以加點嚐鮮</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>每人約 ₩10,000–13,000，CP值極高</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=밀양돼지국밥+해운대" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot x"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">20:30</div><div class="name">自由活動　海雲台夜間散步</div><div class="tags"><span class="tag tx">自由</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-ss2eCCSjSQo?w=800&q=80" alt="海雲台夜晚" loading="lazy">
-      <div class="card-detail">海雲台沙灘夜間散步，欣賞夜晚海景燈光。順道至附近便利商店採買零食、飲料與備用藥品。<div class="tip-box">💡 GS25 / CU 全天24小時，韓國零食選擇豐富，可順手買好隔天早餐備用。</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=해운대해수욕장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>海雲台沙灘</a></div>
-      </div>
-    </div>
-  </div></div>
-```
-
+    <div class="stop"><div class="tl"><div class="dot x"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">20:30</div><div class="name">自由活動　海雲台夜間散步</div><div class="tags"><span class="tag tx">自由</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>海雲台海灘全長 1.5km，夜間燈光迷人，適合飯後散步消食。沿途有多家 GS25、CU 便利商店可採買。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🛒</span><span>便利商店必買：韓國零食、辛拉麵、飲料、隔天早餐、備用藥品（暈車藥、腸胃藥、OK繃）</span></div>
+            <div class="dl-item"><span class="dl-icon">🌡️</span><span>4月中旬夜晚約 10–12°C，記得帶外套或薄羽絨</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=해운대해수욕장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>海雲台沙灘</a></div>
+        </div></div>
+      </div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     D2
-══════════════════════════════════════════ -->
-
+<!-- ════════════════════ D2 ════════════════════ -->
 <div class="panel" id="p1">
-  <div class="day-banner">
-    <img src="https://images.unsplash.com/photo-D7Gpt-yNEps?w=800&q=80" alt="海岸列車">
-    <div class="day-banner-grad"></div>
-    <div class="day-banner-body">
-      <div class="day-num">Day 2 · April 17</div>
-      <div class="day-title">藍色海岸線</div>
-      <div class="day-date">海岸列車 · 青沙浦 · 膠囊列車 · 味讚王烤肉</div>
-    </div>
+  <div class="day-header">
+    <div class="day-badge">Day 2 · April 17</div>
+    <div class="day-heading">藍色海岸線</div>
+    <div class="day-meta">海岸列車 · 青沙浦燈塔 · 膠囊列車 · 味讚王烤肉</div>
+    <div class="day-note">🚂 重點：今日全程以海景為主題。早上搭海岸列車 + 青沙浦散步 + 膠囊列車，下午自由逛逛，晚上超厚切烤肉。⚠ 列車需提前預約，請確認時段已訂好。</div>
   </div>
   <div class="content">
-    <div class="day-note">🚂 今日重點：尾浦搭海岸列車、青沙浦散步打卡、膠囊列車俯瞰海景、晚上味讚王超厚切烤肉</div>
 
-```
-<div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">09:00</div><div class="name">飯店早餐後集合出發</div><div class="tags"><span class="tag th">住宿</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <div class="card-detail">用完早餐後於大廳集合，準備前往尾浦站搭乘海岸列車。</div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">09:00</div><div class="name">飯店早餐後集合</div><div class="tags"><span class="tag th">住宿</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>用完早餐後大廳集合，步行或搭計程車前往尾浦（미포）站，作為今日海岸線之旅的起點。從飯店步行約 15 分鐘，或計程車約 5 分鐘可抵達。</p>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">10:00 — 11:00</div><div class="name">海岸列車（尾浦 → 踏石）</div><div class="tags"><span class="tag ts">景點</span><span class="tag tw">⚠ 需預約</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-D7Gpt-yNEps?w=800&q=80" alt="海岸列車" loading="lazy">
-      <div class="card-detail">沿著東海岸線行駛的觀光小火車，全員坐面海座位欣賞無敵窗景，是釜山最有特色的交通體驗之一。<div class="warn-box">⚠ 務必提前預約，現場購票通常早已售完</div><div class="tip-box">💡 建議選晴天出遊，天氣好時海水透藍，視覺效果最佳</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=블루라인파크+미포정류장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>尾浦站</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">10:00 — 11:00</div><div class="name">海岸列車　尾浦 → 踏石 블루라인파크</div><div class="tags"><span class="tag ts">景點</span><span class="tag tw">⚠ 需預約</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>Haeundae Blueline Park 的海岸觀光小火車，沿著廢棄東海南部鐵路改建而成，全長 4.8km。全員坐面海座位，窗外就是湛藍的東海，是釜山最具特色的移動體驗之一。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🎫</span><span>票價：單程 ₩8,000、雙程 ₩12,000、全站通票 ₩16,000</span></div>
+            <div class="dl-item"><span class="dl-icon">⏱</span><span>車程約 40–50 分鐘，途經達摩峰隧道、青沙浦等站</span></div>
+          </div>
+          <div class="info-block warn-block">⚠ 務必提前預約，熱門時段幾乎秒殺，尤其週末。可至官網或 Klook 購票</div>
+          <div class="info-block tip-block">💡 天氣好時海水透藍如鏡，日落前後光線最美，適合拍照留念</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=블루라인파크+미포정류장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>尾浦站</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">11:00 — 12:00</div><div class="name">青沙浦景點散步</div><div class="tags"><span class="tag ts">景點</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="青沙浦燈塔" loading="lazy">
-      <div class="card-detail">充滿漁村風情的小聚落，三大打卡點：透明玻璃天空步道、紅白雙色燈塔、以及橫越漁港的鐵道平交道。<div class="tip-box">💡 鐵道平交道拍照角度最佳，等燈塔列入背景構圖更完整</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=청사포+해변" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>青沙浦</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">11:00 — 12:00</div><div class="name">青沙浦散步　天空步道 · 紅白燈塔 · 平交道</div><div class="tags"><span class="tag ts">景點</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>保留舊漁村風情的迷你海灣，是釜山最上相的打卡地點之一。三大必拍景點距離很近，步行 15 分鐘可走完全程。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🔭</span><span>天空步道（다릿돌 전망대）：透明玻璃地板延伸至海面上，俯瞰青沙浦漁港</span></div>
+            <div class="dl-item"><span class="dl-icon">🗼</span><span>紅白雙色燈塔：站在兩座燈塔中間構圖最好看，顏色對比鮮明</span></div>
+            <div class="dl-item"><span class="dl-icon">📸</span><span>鐵道平交道：漁村小路與鐵軌交叉，將燈塔收入背景是網美必拍角度</span></div>
+          </div>
+          <div class="info-block tip-block">💡 天空步道免費，燈塔區域也開放自由參觀。附近有幾家海景咖啡廳可以坐下來休息</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=청사포+해변" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>青沙浦</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">12:00 — 12:30</div><div class="name">膠囊列車（青沙浦 → 尾浦）</div><div class="tags"><span class="tag ts">景點</span><span class="tag tw">⚠ 需預約</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-D7Gpt-yNEps?w=800&q=80" alt="膠囊列車" loading="lazy">
-      <div class="card-detail">4人一車廂的空中觀光車，從高處緩慢俯視海岸線，視角與海岸列車完全不同，同一段海景兩種體驗。<div class="warn-box">⚠ 同樣需要提前預約，建議與海岸列車同時一起訂</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=블루라인파크+청사포" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>膠囊列車站</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">12:00 — 12:30</div><div class="name">膠囊列車（天空膠囊）　青沙浦 → 尾浦</div><div class="tags"><span class="tag ts">景點</span><span class="tag tw">⚠ 需預約</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>4人一車廂的空中觀光膠囊車，在 7–10 公尺高空緩慢滑行，從俯視角度欣賞海岸線。因為速度慢又私密，和海岸列車的臨場感完全不同，是同一段海景的雙重體驗。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🎫</span><span>票價：2人 ₩40,000、3人 ₩45,000、4人 ₩50,000（單程）</span></div>
+            <div class="dl-item"><span class="dl-icon">⏱</span><span>青沙浦 → 尾浦單程約 30 分鐘，移動緩慢，可盡情拍照</span></div>
+          </div>
+          <div class="info-block warn-block">⚠ 建議和海岸列車一起預約，確保時段相連不需等太久</div>
+          <div class="info-block tip-block">💡 帶飲料零食上去一邊欣賞海景一邊享用，是許多人推薦的方式！</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=블루라인파크+청사포" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>膠囊列車站</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">13:00 — 14:30</div><div class="name">午餐：海雲台冷麵</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="韓式冷麵" loading="lazy">
-      <div class="card-detail">招牌小麥麵條製成的冷麵，口感Q彈帶嚼勁，搭配熱騰騰的韓式蒸餃是最佳組合。<div class="tip-box">💡 冷麵拿到後先不要剪斷，拉長看長度是當地傳統，象徵長壽</div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">13:00 — 14:30</div><div class="name">午餐：海雲台冷麵 해운대 밀면</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>「밀면（密麵）」是釜山獨有的小麥冷麵，韓戰時期由北方難民帶來並在地化，口感比蕎麥冷麵更Q彈有嚼勁。搭配韓式蒸餃（만두）是最傳統的吃法組合。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🥢</span><span>拿到冷麵先不要剪斷，拉長看長度是當地傳統，象徵長壽</span></div>
+            <div class="dl-item"><span class="dl-icon">🌶</span><span>分「물밀면」（湯底）和「비빔밀면」（辣拌）兩種，第一次吃推薦湯底版</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>冷麵 ₩8,000–10,000，蒸餃 ₩5,000–7,000</span></div>
+          </div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">15:00 — 18:00</div><div class="name">飯店午休 / 自由活動</div><div class="tags"><span class="tag tx">自由</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <div class="card-detail">回飯店休息充電，或自行前往附近探索。<div class="tip-box">💡 推薦：海理團路文青咖啡街（獨立咖啡廳密集）、Olive Young 藥妝採買</div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">15:00 — 18:00</div><div class="name">飯店午休 / 自由活動</div><div class="tags"><span class="tag tx">自由</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>回飯店休息，或自行前往附近探索。今日早起辛苦，小睡一下蓄積晚上烤肉的體力。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">☕</span><span>海理團路（해리단길）：類似首爾梨泰院風格的文青咖啡街，獨立選物店、咖啡廳林立</span></div>
+            <div class="dl-item"><span class="dl-icon">💊</span><span>Olive Young（올리브영）：韓國最大連鎖藥妝，護膚品、彩妝、保健食品齊全，是必逛採購點</span></div>
+          </div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">18:30 — 20:00</div><div class="name">晚餐：味讚王烤肉</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tw">⚠ 現場抽號</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-ebNZJGWd4zY?w=800&q=80" alt="韓式烤肉" loading="lazy">
-      <div class="card-detail">3.5cm 超厚切豬肉，由店員親自代烤到最佳熟度。肉厚多汁，是許多旅客指定必吃的釜山烤肉名店。<div class="warn-box">⚠ 無法預約，需現場抽號排隊，建議提早前往取號</div><div class="tip-box">💡 搭配泡菜和生菜包著吃，風味最佳</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=미찬왕+해운대" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
-```
-
+    <div class="stop"><div class="tl"><div class="dot f"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">18:30 — 20:00</div><div class="name">晚餐：味讚王烤肉 미찬왕</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tw">⚠ 現場抽號</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>以驚人的 3.5cm 超厚切豬五花聞名全釜山，由店員親自代烤至最佳熟度，鎖住肉汁後再切成小塊上桌。肉質鮮嫩多汁，幾乎所有旅客到釜山都指名必吃。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🥩</span><span>招牌：厚切五花肉（삼겹살）每人份量約 200g，建議每人點 1–1.5 份</span></div>
+            <div class="dl-item"><span class="dl-icon">🥬</span><span>最佳吃法：烤肉放在生菜上，加泡菜、蒜片、蘸醬包著吃，一口爆炸</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>每人預算約 ₩20,000–25,000，含飲料</span></div>
+          </div>
+          <div class="info-block warn-block">⚠ 無法電話或網路預約，只能現場拿號碼牌等候。建議 18:00 前抵達取號，等候時間可能 30–60 分鐘</div>
+          <div class="info-block tip-block">💡 等待期間可在附近咖啡廳坐著，店員通知後再回來入座</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=미찬왕+해운대" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
+        </div></div>
+      </div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     D3
-══════════════════════════════════════════ -->
-
+<!-- ════════════════════ D3 ════════════════════ -->
 <div class="panel" id="p2">
-  <div class="day-banner">
-    <img src="https://images.unsplash.com/photo-r09N4y2xEJU?w=800&q=80" alt="松島纜車">
-    <div class="day-banner-grad"></div>
-    <div class="day-banner-body">
-      <div class="day-num">Day 3 · April 18</div>
-      <div class="day-title">移師南浦洞</div>
-      <div class="day-date">Check-out · 松島纜車 · 分組行動 · 無人機表演</div>
-    </div>
+  <div class="day-header">
+    <div class="day-badge">Day 3 · April 18</div>
+    <div class="day-heading">移師南浦洞</div>
+    <div class="day-meta">Check-out · 松島纜車 · 分組行動 · 韓定食 · 無人機表演</div>
+    <div class="day-note">🚡 重點：今日大移動，退房換飯店。鬆島纜車欣賞海景 → 分組自由行 → 大屋韓定食晚餐 → 廣安里無人機表演收尾。</div>
   </div>
   <div class="content">
-    <div class="day-note">🚡 今日重點：退房大移動 → 松島海上纜車 → A/B分組 → 大屋韓定食 → 廣安里無人機表演</div>
 
-```
-<div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">09:30 — 10:00</div><div class="name">飯店 Check-out</div><div class="tags"><span class="tag th">住宿</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body"><div class="card-detail">退房並整理行李，準備包車大移動前往南浦洞。<div class="tip-box">💡 建議前晚先打包好行李，節省早上時間</div></div></div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">09:30 — 10:00</div><div class="name">飯店 Check-out</div><div class="tags"><span class="tag th">住宿</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>退房並整理好所有行李，準備包車移動至南浦洞。建議前晚先完成打包，早上只需梳洗出發，節省時間。</p>
+          <div class="info-block tip-block">💡 退房前記得確認：房卡歸還、行李沒有遺漏、確認帳單無誤</div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">10:00 — 11:30</div><div class="name">移動 → Hotel FORET Premier Nampo 寄行李</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-Fh6it-vgByk?w=800&q=80" alt="南浦洞街景" loading="lazy">
-      <div class="card-detail">包車移動至南浦洞新飯店，先行寄放行李，輕裝出發玩松島。<div class="tip-box">💡 Check-in 前可免費寄放行李，領取房卡通常傍晚才能辦理</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Hotel+FORET+Premier+Nampo+Busan" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hotel FORET</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">10:00 — 11:30</div><div class="name">移動 → Hotel FORET Premier Nampo　寄行李</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>包車從海雲台移動至南浦洞新飯店，車程約 30–40 分鐘。抵達後先行寄放行李，下午 Check-in 正式辦理入住，輕裝出發玩松島。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">📍</span><span>南浦洞位於釜山市中心，鄰近 BIFF 廣場、札嘎其市場、樂天超市，生活機能極佳</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=Hotel+FORET+Premier+Nampo+Busan" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hotel FORET</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">11:30 — 13:30</div><div class="name">松島海上纜車</div><div class="tags"><span class="tag ts">景點</span><span class="tag tt">包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-r09N4y2xEJU?w=800&q=80" alt="松島海上纜車" loading="lazy">
-      <div class="card-detail">韓國最長海上纜車，連接松島海水浴場與天馬山。可選擇透明水晶車廂，腳底直接看到海面，俯瞰松島灣與影島全景震撼十足。<div class="tip-box">💡 水晶車廂需加價，但體驗值得。建議提前線上購票，避免現場排隊等候</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=송도해상케이블카" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>松島纜車</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">11:30 — 13:30</div><div class="name">松島海上纜車 부산 에어크루즈</div><div class="tags"><span class="tag ts">景點</span><span class="tag tt">包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>韓國最長的海上纜車，全長 1.62km，最高處距海面 86 公尺，連接松島海水浴場與天馬山。可選一般車廂或透明水晶車廂，水晶版腳底直接看見海面，體驗截然不同。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🎫</span><span>票價：一般車廂 ₩15,000、水晶車廂 ₩20,000（單程），建議去程水晶、回程一般</span></div>
+            <div class="dl-item"><span class="dl-icon">🌊</span><span>途中可俯瞰松島灣、南港大橋、影島全景，天氣好時視野極佳</span></div>
+            <div class="dl-item"><span class="dl-icon">🚶</span><span>纜車附近有松島 Skywalk 海上步道，透明玻璃地板免費開放，可順道走走</span></div>
+          </div>
+          <div class="info-block tip-block">💡 水晶車廂建議提前線上購票，現場票可能需要等候較長時間</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=송도해상케이블카" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>松島纜車</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">14:00 — 17:00</div><div class="name">分組自由行動</div><div class="tags"><span class="tag tx">自由</span><span class="tag tt">自行搭車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-Jf7pL52wn9g?w=800&q=80" alt="分組行動" loading="lazy">
-      <div class="card-detail">依興趣分組探索釜山不同面貌。<div class="grp-rows"><div class="ga-row">🅐 A組：影島白淺灘步道（海景咖啡廳、隧道剪影打卡）</div><div class="gb-row">🅑 B組：西面 / 南浦商圈（百貨公司、平價地下街）</div></div><div class="tip-box">💡 雨備方案：影島 ARTE MUSEUM 沉浸式數位藝術展，全程室內</div>
-      <div class="card-actions">
-        <a class="map-btn" href="https://maps.google.com/?q=흰여울문화마을" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>A：白淺灘步道</a>
-        <a class="map-btn" href="https://maps.google.com/?q=아르떼뮤지엄+부산" target="_blank" style="background:#7c3aed"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>雨備：ARTE MUSEUM</a>
-      </div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">14:00 — 17:00</div><div class="name">分組自由行動</div><div class="tags"><span class="tag tx">自由</span><span class="tag tt">自行搭車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>根據各自喜好分組，充分探索釜山不同面貌。</p>
+          <div class="grp-rows">
+            <div class="ga-row">🅐 A組：影島白淺灘步道 흰여울문화마을｜沿著海崖步道走，欣賞隧道剪影光影效果、海景咖啡廳，是近年釜山最熱門的文青景點</div>
+            <div class="gb-row">🅑 B組：西面 / 南浦商圈｜NC百貨、地下街平價服飾、鬧區街邊小吃，可以先預熱隔天逛街行程</div>
+          </div>
+          <div class="info-block note-block">🌧 雨備方案：影島 ARTE MUSEUM（아르떼뮤지엄 부산）— 全韓最大沉浸式數位藝術展，全程室內，票價約 ₩17,000，下雨天最佳選擇</div>
+          <div class="card-actions">
+            <a class="map-btn" href="https://maps.google.com/?q=흰여울문화마을" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>A：白淺灘步道</a>
+            <a class="map-btn alt" href="https://maps.google.com/?q=아르떼뮤지엄+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>雨備：ARTE</a>
+          </div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">17:00 — 18:30</div><div class="name">逛市場 BIFF廣場 / 罐頭市場</div><div class="tags"><span class="tag tx">自由</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1540189549336-e6e99eb4b951?w=800&q=80" alt="市場" loading="lazy">
-      <div class="card-detail">南浦洞最熱鬧的傳統市場街道，邊走邊吃邊逛。<div class="tip-box">💡 必吃現做堅果黑糖餅（호떡），外脆內軟、焦糖香氣四溢，是南浦洞最代表性的街頭小吃</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=BIFF+광장+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>BIFF廣場</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot x"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">17:00 — 18:30</div><div class="name">逛 BIFF廣場 / 罐頭市場</div><div class="tags"><span class="tag tx">自由</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>BIFF 廣場是釜山國際電影節的主要舞台，街道兩側有明星手印留念。罐頭市場（깡통시장）緊鄰其旁，是戰後遺留的露天市場，現在以夜市型態保留，各式街頭小吃應有盡有。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🥞</span><span>必吃：黑糖堅果餅（씨앗호떡）— 攤位前通常有排隊，外皮酥脆、內餡有堅果碎和黑糖，是釜山最代表的街頭小吃</span></div>
+            <div class="dl-item"><span class="dl-icon">🍢</span><span>魚板（어묵）：釜山特產，現煮魚板湯串，冬春季節吃特別暖胃</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=BIFF+광장+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>BIFF廣場</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">18:30 — 20:00</div><div class="name">晚餐：大屋韓定食</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-_sCySHnEoK0?w=800&q=80" alt="韓式定食" loading="lazy">
-      <div class="card-detail">傳統韓式百年老房中享用滿桌小菜的正式定食。光是小菜的種類和數量就讓人驚嘆，是體驗道地韓式飲食文化的最佳選擇。<div class="tip-box">💡 小菜可以免費續，多嘗幾種不同口味，每一樣都有故事</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=대옥+한정식+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">18:30 — 20:00</div><div class="name">晚餐：大屋韓定食 대옥</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>在擁有百年歷史的傳統韓屋（한옥）建築中享用正式韓式定食。一落座桌上便鋪滿各式小菜（반찬），不但種類多達 15 種以上，全部皆可免費續點，是體驗道地韓式飲食文化的最佳方式。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🍱</span><span>小菜全部可以免費續，建議每樣都嘗嚐，每道都有其獨特風味與食材</span></div>
+            <div class="dl-item"><span class="dl-icon">🏛</span><span>韓屋建築本身就是拍照好地點，用餐前可先在庭院拍幾張</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>定食套餐每人約 ₩25,000–35,000，份量十足</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=대옥+한정식+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">20:00 — 20:15</div><div class="name">廣安里無人機表演</div><div class="tags"><span class="tag ts">景點</span><span class="tag tx">自由參加</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-Fh6it-vgByk?w=800&q=80" alt="廣安里夜景" loading="lazy">
-      <div class="card-detail">數百台無人機在廣安里大橋上空排列出動態圖騰，是釜山夜晚最夢幻的視覺體驗之一。<div class="tip-box">💡 廣安里海灘任何位置都能看到，在沙灘上坐著看最舒服，記得帶外套</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=광안리해수욕장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>廣安里海灘</a></div>
-      </div>
-    </div>
-  </div></div>
-```
-
+    <div class="stop"><div class="tl"><div class="dot s"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">20:00 — 20:15</div><div class="name">廣安里無人機表演 광안리 M드론쇼</div><div class="tags"><span class="tag ts">景點</span><span class="tag tx">自由參加</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>韓國第一個常設無人機表演，每週六晚上 8 點與 10 點於廣安里大橋上空舉行，數百台無人機拼出動態圖騰，配合廣安大橋的燈光秀，視覺衝擊震撼。4月中旬是週五，需確認當週表演時間。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">📅</span><span>表演時間：週六固定 20:00 & 22:00，其他日期不定期舉辦，出發前請確認官方公告</span></div>
+            <div class="dl-item"><span class="dl-icon">📍</span><span>廣安里海灘任何位置都能看到，在沙灘坐著或站在步道旁均可</span></div>
+            <div class="dl-item"><span class="dl-icon">🌡️</span><span>4月夜晚偏涼，記得帶外套，沙灘附近風較大</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=광안리해수욕장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>廣安里海灘</a></div>
+        </div></div>
+      </div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     D4
-══════════════════════════════════════════ -->
-
+<!-- ════════════════════ D4 ════════════════════ -->
 <div class="panel" id="p3">
-  <div class="day-banner">
-    <img src="https://images.unsplash.com/photo-zGocRrMrGQY?w=800&q=80" alt="西面商圈">
-    <div class="day-banner-grad"></div>
-    <div class="day-banner-body">
-      <div class="day-num">Day 4 · April 19</div>
-      <div class="day-title">購物掃貨日</div>
-      <div class="day-date">EGG DROP · 西面地下街 · 李在模 Pizza · 樂天超市</div>
-    </div>
+  <div class="day-header">
+    <div class="day-badge">Day 4 · April 19</div>
+    <div class="day-heading">購物掃貨日</div>
+    <div class="day-meta">EGG DROP · 西面逛街 · 李在模 Pizza · 樂天超市最終掃貨</div>
+    <div class="day-note">🛍 重點：今日以採購為主。李在模 Pizza 排隊神店，建議 12:30 前到場。樂天超市伴手禮採購記得留意退稅門檻。</div>
   </div>
   <div class="content">
-    <div class="day-note">🛍 今日重點：EGG DROP早餐、西面逛街購物、排隊名店起司Pizza、最後樂天超市掃伴手禮</div>
 
-```
-<div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">09:00 — 10:00</div><div class="name">早餐：EGG DROP</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&q=80" alt="EGG DROP" loading="lazy">
-      <div class="card-detail">韓國爆紅早午餐品牌，招牌是視覺感十足的滑嫩歐姆蛋厚吐司，蛋液嫩滑、麵包鬆軟，顏值與味道兼備。<div class="tip-box">💡 先拍照再吃！放久了蛋液會凝固，影響滑嫩口感</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=에그드랍+남포+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">09:00 — 10:00</div><div class="name">早餐：EGG DROP 에그드랍</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>韓國爆紅早午餐品牌，以頂著一大坨滑嫩歐姆蛋的厚片吐司為招牌，色香味俱全，是近年 IG 打卡率最高的韓國早餐之一。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🍳</span><span>必點：Original（半熟歐姆蛋厚吐司），吃之前先對角切開，讓蛋液流出更好拍也更好吃</span></div>
+            <div class="dl-item"><span class="dl-icon">📸</span><span>先拍照再吃！蛋液放久會凝固，滑嫩感消失，口感大打折扣</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>每份約 ₩7,000–9,000，份量適中，可加點拿鐵一起享用</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=에그드랍+남포+부산" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">10:30 — 13:00</div><div class="name">西面商圈逛街</div><div class="tags"><span class="tag ts">景點</span><span class="tag tt">地鐵／計程車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-zGocRrMrGQY?w=800&q=80" alt="地下街" loading="lazy">
-      <div class="card-detail">釜山最熱鬧的年輕人購物聖地，三大必逛區：地下街服飾（平價潮流）、NC百貨（品牌集合）、田浦咖啡街（獨立咖啡廳）。<div class="tip-box">💡 地下街選擇非常多，適合批量採購服飾與配件；田浦咖啡街每間店都有自己的特色，值得多走幾間</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=서면지하상가" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>西面地下街</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">10:30 — 13:00</div><div class="name">西面商圈逛街 서면</div><div class="tags"><span class="tag ts">景點</span><span class="tag tt">地鐵 / 計程車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>釜山最熱鬧的購物商圈，結合地下街平價時尚與百貨品牌，加上附近的咖啡街，可以輕鬆花上半天。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">👗</span><span>西面地下商街（서면지하상가）：全長數百公尺，潮流服飾、配件、鞋子一應俱全，價格親民</span></div>
+            <div class="dl-item"><span class="dl-icon">🏬</span><span>NC百貨（NC백화점）：集合國內外知名品牌，從 ZARA 到韓國潮牌都有</span></div>
+            <div class="dl-item"><span class="dl-icon">☕</span><span>田浦咖啡街（전포카페거리）：各具特色的獨立咖啡廳聚集地，每間設計感都很強，適合拍照休息</span></div>
+          </div>
+          <div class="info-block tip-block">💡 搭釜山地鐵 1 號線至西面（서면）站，出口就是商圈核心，交通方便</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=서면지하상가" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>西面地下街</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">13:00 — 14:30</div><div class="name">午餐：李在模 Pizza</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tw">⚠ 建議早排</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="起司披薩" loading="lazy">
-      <div class="card-detail">釜山排隊神店，超厚芝士披薩外皮酥脆、起司拉絲效果絕佳，份量豪邁。<div class="warn-box">⚠ 建議 12:30 前抵達開始排隊，否則等候時間超長</div><div class="tip-box">💡 必點起司厚披薩，是這裡的靈魂，其他配菜可依人數彈性決定</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=이재모피자" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot f"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">13:00 — 14:30</div><div class="name">午餐：李在模 Pizza 이재모피자</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tw">⚠ 建議早排</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>在釜山經營超過 30 年的傳奇排隊披薩名店。厚達 3cm 的披薩餅皮配上大量牽絲起司，拉起來的長度令人驚嘆，是韓國旅遊節目反覆介紹的必吃名店。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🍕</span><span>必點：起司厚披薩（치즈 피자），是這裡的靈魂，切開時起司拉絲效果超強</span></div>
+            <div class="dl-item"><span class="dl-icon">📏</span><span>披薩厚度約 2–3cm，比一般披薩厚很多，份量扎實，2–3 人點一份剛好</span></div>
+            <div class="dl-item"><span class="dl-icon">💰</span><span>價格平實，一份約 ₩15,000–18,000，CP值極高</span></div>
+          </div>
+          <div class="info-block warn-block">⚠ 午餐尖峰人潮多，建議 12:30 前抵達開始排隊，否則等候超過 1 小時</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=이재모피자" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">15:00 — 18:00</div><div class="name">樂天超市（南浦店）最後掃貨</div><div class="tags"><span class="tag ts">景點</span><span class="tag ta">步行</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80" alt="樂天超市" loading="lazy">
-      <div class="card-detail">旅程最後伴手禮採購大作戰！樂天超市南浦店品項齊全，一站搞定。<div class="tip-box">💡 熱門伴手禮：韓國泡麵、海苔禮盒、紅蔘糖果、膠原蛋白飲、蜂蜜奶油薯片。購物滿一定金額可辦理退稅！</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=롯데마트+남포점" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>樂天超市南浦</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot s"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">15:00 — 18:00</div><div class="name">樂天超市（南浦店）伴手禮大掃貨</div><div class="tags"><span class="tag ts">景點</span><span class="tag ta">步行</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>旅程最後一次大型採購機會！樂天超市南浦店品項齊全，零食、泡麵、保養品、酒類一站搞定，是最多台灣旅客指定採購的地點。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🍜</span><span>泡麵類：辛拉麵黑色（신라면블랙）、農心辣白菜、布袋哥炸醬麵（짜파게티）</span></div>
+            <div class="dl-item"><span class="dl-icon">🍪</span><span>零食類：蜂蜜奶油薯片、海苔禮盒（動物王國款）、魚板條、韓式年糕脆片</span></div>
+            <div class="dl-item"><span class="dl-icon">💊</span><span>保健類：紅蔘糖果、膠原蛋白飲、維他命 C 沖泡包、面膜禮盒</span></div>
+            <div class="dl-item"><span class="dl-icon">🧴</span><span>保養類：呂（RYOE）洗髮精、謎尚防曬、Dr. Jart 修護面膜</span></div>
+          </div>
+          <div class="info-block tip-block">💡 單次消費滿 ₩30,000 以上可辦理退稅（VAT 10%），護照帶在身上，在退稅機或服務台辦理即可</div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=롯데마트+남포점" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>樂天超市南浦</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot f"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">18:30 — 20:00</div><div class="name">晚餐自理 / 南浦洞逛街</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tx">自由</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <div class="card-detail">最後一晚自由覓食，享受釜山夜晚氛圍。<div class="tip-box">💡 推薦選項 ① 札嘎其市場現煮海鮮（釜山最大傳統魚市場）　② 富平豬蹄街（豬腳是釜山名物）</div>
-      <div class="card-actions">
-        <a class="map-btn" href="https://maps.google.com/?q=자갈치시장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>札嘎其市場</a>
-        <a class="map-btn" href="https://maps.google.com/?q=부평깡통시장" target="_blank" style="background:#7c3aed"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>富平豬蹄街</a>
-      </div>
-      </div>
-    </div>
-  </div></div>
-```
-
+    <div class="stop"><div class="tl"><div class="dot f"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">18:30 — 20:00</div><div class="name">晚餐自理 / 南浦洞逛街</div><div class="tags"><span class="tag tf">餐廳</span><span class="tag tx">自由</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>最後一個完整晚上，按照各自喜好自由覓食，將釜山美食記憶留到最後一刻。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🐟</span><span>札嘎其市場（자갈치시장）：韓國最大海鮮市場，一樓活魚攤購買、二樓加工料理，可以吃到超新鮮生魚片</span></div>
+            <div class="dl-item"><span class="dl-icon">🍖</span><span>富平豬蹄街（부평 족발골목）：釜山名物豬蹄，皮 Q 肉嫩，沾蝦醬吃是當地吃法</span></div>
+            <div class="dl-item"><span class="dl-icon">🌙</span><span>最後一晚也可以安排在廣安里海灘附近的海景餐廳，邊吃飯邊欣賞大橋夜景</span></div>
+          </div>
+          <div class="card-actions">
+            <a class="map-btn" href="https://maps.google.com/?q=자갈치시장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>札嘎其市場</a>
+            <a class="map-btn alt" href="https://maps.google.com/?q=부평깡통시장" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>富平豬蹄街</a>
+          </div>
+        </div></div>
+      </div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     D5
-══════════════════════════════════════════ -->
-
+<!-- ════════════════════ D5 ════════════════════ -->
 <div class="panel" id="p4">
-  <div class="day-banner">
-    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="回程">
-    <div class="day-banner-grad"></div>
-    <div class="day-banner-body">
-      <div class="day-num">Day 5 · April 20</div>
-      <div class="day-title">平安回家</div>
-      <div class="day-date">早班機 — 準時出發，台中見！</div>
-    </div>
+  <div class="day-header">
+    <div class="day-badge">Day 5 · April 20</div>
+    <div class="day-heading">平安回家</div>
+    <div class="day-meta">早班機出發 — 務必準時！</div>
+    <div class="day-note">✈ 重點：今日早班機，全員務必準時。建議前一晚打包完畢、確認護照與登機證、買好早餐備用。機場退稅最後機會別忘了！</div>
   </div>
   <div class="content">
-    <div class="day-note">✈ 今日重點：早班機，請務必準時！建議前一晚打包完畢、備好早餐，明天只需要帶著行李出門。</div>
 
-```
-<div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">06:00</div><div class="name">退房前往機場</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">釜山包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <div class="card-detail">早班機務必準時出發，已安排包車接送至金海機場。<div class="warn-box">⚠ 早班機不等人！請設定兩個鬧鐘，提前確認護照、登機證、行李</div><div class="tip-box">💡 提前在超商購好早餐，在車上或機場享用，早上不用找地方吃</div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot h"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">06:00</div><div class="name">退房前往機場</div><div class="tags"><span class="tag th">住宿</span><span class="tag tt">釜山包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>早班機不等人，請務必準時於 06:00 退房集合。已安排包車前往金海國際機場，車程約 30–40 分鐘。建議前一晚：行李打包完畢、確認護照位置、設定兩個鬧鐘。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">⏰</span><span>提前在便利商店買好早餐，在車上享用，省去機場排隊用餐時間</span></div>
+            <div class="dl-item"><span class="dl-icon">🧾</span><span>若有辦理退稅，需在辦理登機前到退稅機或海關蓋章，才能在出境後領款</span></div>
+          </div>
+          <div class="info-block warn-block">⚠ 早班機不等人！請設定兩個鬧鐘，入睡前再確認一次隔天行程</div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">09:00 — 10:30</div><div class="name">KE2085 飛往桃園</div><div class="tags"><span class="tag tt">航班</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="回程飛機" loading="lazy">
-      <div class="card-detail">搭乘大韓航空 KE2085 從金海飛返桃園，約 10:30 抵達桃園國際機場。<div class="tip-box">💡 記得在機場辦理退稅手續！退款可退回信用卡或現金領取，不要錯過</div>
-      <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=김해국제공항" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>金海國際機場</a></div>
-      </div>
-    </div>
-  </div></div>
+    <div class="stop"><div class="tl"><div class="dot t"></div><div class="ln"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">09:00 — 10:30</div><div class="name">KE2085 飛往桃園</div><div class="tags"><span class="tag tt">航班</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>搭乘大韓航空 KE2085 從金海國際機場返回桃園，飛行時間約 2.5 小時，預計 10:30 抵達桃園國際機場第一航廈。</p>
+          <div class="detail-list">
+            <div class="dl-item"><span class="dl-icon">🧾</span><span>若有辦退稅：在機場辦理登機前到退稅機或海關辦理，出境後領現金或等刷卡退款</span></div>
+            <div class="dl-item"><span class="dl-icon">🎁</span><span>機場免稅店可用剩餘韓元購買巧克力、化妝品、酒類，比市區便宜</span></div>
+            <div class="dl-item"><span class="dl-icon">📦</span><span>超重行李可在機場寄艙，費用較高，建議出發前量好重量</span></div>
+          </div>
+          <div class="card-actions"><a class="map-btn" href="https://maps.google.com/?q=김해국제공항" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>金海國際機場</a></div>
+        </div></div>
+      </div></div>
 
-<div class="stop"><div class="tl"><div class="dot t"></div></div>
-  <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div><div class="time">11:30</div><div class="name">包車回溫暖的家 🏠</div><div class="tags"><span class="tag tt">包車</span></div></div><div class="caret-wrap"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
-    <div class="card-body">
-      <div class="card-detail">抵達桃園後包車分批返台中，旅程圓滿結束！<div class="grp-rows"><div class="ga-row">🅐 A組：西屯 / 大雅</div><div class="gb-row">🅑 B組：沙鹿</div></div></div>
-    </div>
-  </div></div>
-```
-
+    <div class="stop"><div class="tl"><div class="dot t"></div></div>
+      <div class="card" onclick="tog(this)"><div class="card-head"><div class="ch"><div class="time-name"><div class="time">11:30</div><div class="name">包車回溫暖的家 🏠</div><div class="tags"><span class="tag tt">包車</span></div></div><div class="toggle-btn"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div></div></div>
+        <div class="card-body"><div class="card-detail">
+          <p>抵達桃園後包車分批返台中，旅程圓滿結束！感謝大家一起度過這五天美好的釜山之旅。</p>
+          <div class="grp-rows"><div class="ga-row">🅐 A組：西屯 / 大雅</div><div class="gb-row">🅑 B組：沙鹿</div></div>
+        </div></div>
+      </div></div>
   </div>
 </div>
 
 <!-- ══ LEGEND ══ -->
-
 <div class="legend">
   <div class="legend-title">行程色碼說明</div>
   <div class="legend-items">
-    <div class="li"><div class="ld" style="background:#2563eb"></div>景點</div>
-    <div class="li"><div class="ld" style="background:#e05c35"></div>餐廳</div>
-    <div class="li"><div class="ld" style="background:#16a34a"></div>住宿</div>
-    <div class="li"><div class="ld" style="background:#78716c"></div>交通</div>
+    <div class="li"><div class="ld" style="background:#0891b2"></div>景點</div>
+    <div class="li"><div class="ld" style="background:#f97316"></div>餐廳</div>
+    <div class="li"><div class="ld" style="background:#059669"></div>住宿</div>
+    <div class="li"><div class="ld" style="background:#94a3b8"></div>交通</div>
     <div class="li"><div class="ld" style="background:#7c3aed"></div>自由活動</div>
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
-
 <div class="footer">
-  釜山五日行程 2026 · 點擊卡片展開詳情 · 📍 按鈕可開啟 Google Maps<br>
-  <span class="photo-note">圖片為示意，將於出發前替換為實際行程照片</span><br><br>
+  釜山五日行程 2026 · 點擊卡片展開詳情 · 📍 按鈕開啟 Google Maps<br>
   祝大家旅途愉快，釜山見！🇰🇷
 </div>
 
@@ -575,11 +687,11 @@ function sw(i){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function tog(c){
-  const isOpen = c.classList.contains('open');
+  const isOpen=c.classList.contains('open');
   c.classList.toggle('open');
-  c.querySelector('.card-body').style.maxHeight = isOpen ? '0' : '900px';
+  const body=c.querySelector('.card-body');
+  body.style.maxHeight=isOpen?'0':'1200px';
 }
 </script>
-
 </body>
 </html>
